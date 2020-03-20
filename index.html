@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="shortcut icon" href="https://i.ya-webdesign.com/images/yahoo-weather-icons-png.png">
+    <link href="https://fonts.googleapis.com/css?family=Calligraffitti&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Navbar Section -->
+    <nav class="navbar navbar-light bg-light sticky-top justify-content-center mb-3">
+        <a href="#" class="navbar-brand">
+            <img src="https://i.ya-webdesign.com/images/yahoo-weather-icons-png.png" width="100px" class="d-inline align-bottom">
+            <span id="deco">Weather</span>
+        </a>
+    </nav>
+    <!-- Introduction -->
+    <div class="mr-4 ml-4">
+        <h1 class="h1">How it works :</h1>
+        <p class="lead">1. The cite may want to know your location , if you allow , your <b class="text-danger"><u>location</u></b> would be marked on the map or by default <b class="text-primary"><u>Mumbai</u></b> map will be loaded. </p>
+        <p class="lead">2. You can enter the name of any city and get Weather information.</p>
+        <p class="lead">3. Once you click on the <b class="text-success"><u>Search</u></b> button a marker will appear on the map , click on it you will get the information</p>
+        <p class="lead">4. Also , you can click on any location on the map and get the information</p>
+    </div>
+    <hr>
+    
+<!-- Input Section -->
+    <div class="mr-5 ml-5">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Enter the name of a city" id="city">
+            <div class="input-group-append">
+            <button class="btn btn-outline-success" type="button" onclick="getWeather()" onfocus="this.blur()">Search <i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </div>
+      <!-- Map display -->
+    <div class="container-fluid">
+        <div class="m-3">
+            <div id="map"></div>
+        </div>
+    </div>
+    <footer class="mt-3 bg-light">
+            <div class="text-dark p-2 sticky-bottom">
+                <h6>&copy; Copyright :</h6>
+                <h5>Balaji</h5>
+            <a href="https://github.com/Balaji-200"><i class="fab fa-github fa-2x"></i></a>
+            </div>
+    </footer>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCokfu3Mjogzb2quW2yhRKRoWGLG5UhJ2Q&callback=initMap"></script>
+    <script src="script.js"></script>
+</body>
+</html>

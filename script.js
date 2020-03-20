@@ -52,7 +52,7 @@ class Weather{
             var {main,weather,name,sys,coord}=this.data;
             this.position.lat=coord.lat;
             this.position.lng=coord.lon;
-            var{temp,humidity}=main;
+            var{temp,humidity,pressure}=main;
             var Des=weather[0].description;
             const Text=`<h2 style="border-bottom:solid; border-color:grey;">${name}&nbsp,&nbsp${sys.country}</h2>
             <p style="color:red"><i class="fas fa-temperature-low"></i>&nbspTemperature&nbsp:&nbsp${temp}&degC</p>

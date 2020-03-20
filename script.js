@@ -43,7 +43,7 @@ class Weather{
     }
     getWeatherByCity(city){
         this.city=city;
-        const url=`http://api.openweathermap.org/data/2.5/weather?&q=${this.city}&units=metric&appid=${appKey}`;
+        const url=`https://api.openweathermap.org/data/2.5/weather?&q=${this.city}&units=metric&appid=${appKey}`;
         fetch(url).then((response)=>{
             const data=response.json();
             return data;
@@ -86,7 +86,7 @@ class Weather{
     }
     getWeatherByLatLng(pos){
         this.position=pos;
-        const url=`http://api.openweathermap.org/data/2.5/weather?lat=${this.position.lat}&lon=${this.position.lng}&units=metric&appid=${appKey}`;
+        const url=`https://api.openweathermap.org/data/2.5/weather?lat=${this.position.lat}&lon=${this.position.lng}&units=metric&appid=${appKey}`;
         fetch(url).then((response)=>{
             const data=response.json();
             return data;
